@@ -6,7 +6,7 @@ from src.Power.matrix_analysis import *
 from src.Jacobi.jacobi import jacobi_rotation_method
 
 
-def isomorphism_check(g1: Graph, g2: Graph, method="power"):
+def isomorphism_check(g1: Graph, g2: Graph, method="Power"):
     m1 = g1.to_matrix()
     m2 = g2.to_matrix()
     n = m1.shape[0]
