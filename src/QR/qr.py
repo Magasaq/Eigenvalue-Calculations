@@ -1,6 +1,6 @@
 
 import numpy as np
-from qr_lib import qr_decomposition, householder_transformation, qr_step_factorization,qr
+from src.QR.qr_lib import qr_decomposition, householder_transformation, qr_step_factorization,qr
 from sklearn.metrics import mean_squared_error as mse
 
 def qr_algorithm(A, max_iter=1000, tol=1e-9):
