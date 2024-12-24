@@ -1,16 +1,10 @@
 import numpy as np
-from sklearn.metrics import mean_squared_error as mse
 from src.QR.qr import qr_algorithm
 import time
 from src.utils import Graph
 from src.Power.matrix_analysis import *
 from src.Jacobi.jacobi import jacobi_rotation_method
 
-
-# def get_matrix(n):
-#     sqrtA = np.random.rand(n, n) - 0.5
-#     A = np.dot(sqrtA, sqrtA.T)
-#     return A
 
 def isomorphism_check(g1: Graph, g2: Graph, method="power"):
     m1 = g1.to_matrix()
@@ -61,29 +55,6 @@ def main():
     graph2.add_edge(5, 6)
 
     print(isomorphism_check(graph1, graph2, "power"))
-
-    # matrix_n = 100
-    #
-    # A = get_matrix(n)
-    #
-    # start_time = time.time()
-    # eigenvalues = qr_algorithm(A)
-    # end_time = time.time()
-    #
-    # eigenvalues_np, _ = np.linalg.eig(A)
-    #
-    # eigenvalues_qr = np.sort(eigenvalues)
-    # eigenvalues_np = np.sort(eigenvalues_np)
-    #
-    # mse_calc = mse(eigenvalues_np, eigenvalues)
-    #
-    # output = {
-    #     "n": n,
-    #     "mse": mse_calc,
-    #     "time": end_time - start_time
-    # }
-    #
-    # print(output)
 
 
 if __name__ == "__main__":
